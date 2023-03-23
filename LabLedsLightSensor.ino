@@ -19,19 +19,49 @@ void setup()
 void loop()
 {
   analogValue = analogRead(lightSensorPin);
-  if(analogValue > 50){
-    digitalWrite(blueLedPin, HIGH);
-    digitalWrite(greenLedPin, HIGH);
-    digitalWrite(redLedPin, HIGH);
-    digitalWrite(yellowLedPin, HIGH);
-    digitalWrite(orangeLedPin, HIGH); 
+  if(analogValue < 100){
+    digitalWrite(blueLedPin, LOW);
+    digitalWrite(greenLedPin, LOW);
+    digitalWrite(redLedPin, LOW);
+    digitalWrite(yellowLedPin, LOW);
+    digitalWrite(orangeLedPin, LOW); 
   
-  }
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(blueLedPin, LOW);
+  } if(analogValue > 150  && analogValue < 200){
+  digitalWrite(blueLedPin, HIGH);
   digitalWrite(greenLedPin, LOW);
   digitalWrite(redLedPin, LOW);
   digitalWrite(yellowLedPin, LOW);
   digitalWrite(orangeLedPin, LOW);
+  
+  } if(analogValue > 250  && analogValue < 300){
+  digitalWrite(blueLedPin, HIGH);
+  digitalWrite(greenLedPin, HIGH);
+  digitalWrite(redLedPin, LOW);
+  digitalWrite(yellowLedPin, LOW);
+  digitalWrite(orangeLedPin, LOW);
+  
+  }if(analogValue > 350  && analogValue < 400){
+  digitalWrite(blueLedPin, HIGH);
+  digitalWrite(greenLedPin, HIGH);
+  digitalWrite(redLedPin, HIGH);
+  digitalWrite(yellowLedPin, HIGH);
+  digitalWrite(orangeLedPin, LOW);
+  
+  }if(analogValue > 450  && analogValue < 500){
+  digitalWrite(blueLedPin, HIGH);
+  digitalWrite(greenLedPin, HIGH);
+  digitalWrite(redLedPin, HIGH);
+  digitalWrite(yellowLedPin, HIGH);
+  digitalWrite(orangeLedPin, LOW);
+  
+  }if(analogValue > 500){
+  digitalWrite(blueLedPin, HIGH);
+  digitalWrite(greenLedPin, HIGH);
+  digitalWrite(redLedPin, HIGH);
+  digitalWrite(yellowLedPin, HIGH);
+  digitalWrite(orangeLedPin, HIGH);
+  
+  }
+
   
 }
